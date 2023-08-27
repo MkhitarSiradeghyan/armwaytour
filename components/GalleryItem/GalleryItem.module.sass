@@ -1,0 +1,24 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.galleryItem
+    aspect-ratio: 1 / 1
+    position: relative
+    .ytFrame
+        width: 100%
+        height: 100%
+    .title
+        font-size: $mSize
+        background: linear-gradient(#0000 0%, $black 100%)
+        color: $white
+        position: absolute
+        width: 100%
+        bottom: 0
+        padding: $xsSize 
+        +mediaPhone
+            font-size: $sSize
+    .bgImage
+        width: 100%
+        height: 100%
+        object-fit: cover
+        display: block

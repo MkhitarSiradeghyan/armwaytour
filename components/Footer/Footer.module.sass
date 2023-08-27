@@ -1,0 +1,29 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+.footer
+    background: $black
+    color: $white
+    padding: $xsSize
+    +mediaPhone
+        padding: $mSize
+    bottom: 0
+    .inner
+        +flex(space-between, center, row)
+        +mediaPhone
+            +flex(space-between, center, column)
+            gap: $lSize
+        .copy
+        .social
+            +flex(space-between, center, row)
+            +mediaPhone
+                gap: $xsSize
+            gap: $mSize
+            font-size: $mSize
+            
+        .media
+            +flex(space-between, center, row)
+            gap: $mSize
+            img
+                display: block
+                text-shadow: 0 0 10px #fff
+                filter: invert(1)

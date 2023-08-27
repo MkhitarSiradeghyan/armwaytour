@@ -1,0 +1,33 @@
+@use "variables" as *
+
+*, *:after, *:before
+  box-sizing: border-box
+*
+  scrollbar-width: thin
+*::-webkit-scrollbar 
+  width: 10px
+  height: 10px
+
+*::-webkit-scrollbar-thumb 
+  background-color: $warn
+  border-radius: 5px
+
+*::-webkit-scrollbar-track 
+  background-color: $info
+
+body
+  margin: 0
+  min-height: 100vh
+  font-family: $font-family
+a
+  color: inherit
+  text-decoration: none
+input, button, textarea, iframe
+  outline: none
+  border: none
+ul
+  padding: 0
+li
+  list-style: none
+button:disabled
+  background: $grey

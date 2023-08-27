@@ -1,0 +1,11 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.layout
+    min-height: 100vh
+    +flex(space-between, stretch, column)
+    .inner
+        +flex(flex-start, stretch, column)
+        flex-grow: 1
+        height: 100%
+        position: relative

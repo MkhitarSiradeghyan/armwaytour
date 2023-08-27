@@ -1,0 +1,24 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.inner
+    flex-grow: 1
+    height: 100%
+    +flex(center, center)
+    .form
+        padding: $sSize
+        border: 1px solid #000
+        +flex(space-between, stretch, column)
+        gap: $sSize
+        .tourName
+            font-size: $mSize
+            .tourNameMarked
+                color: $warn
+        .label
+        .input
+            width: 100%
+            padding: $xsSize
+            font-size: $sSize
+            border: 1px solid #000
+        .check
+            padding: $xsSize

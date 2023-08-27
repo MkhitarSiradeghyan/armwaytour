@@ -1,0 +1,13 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+$classes: ('warn': $warn, 'info': $info, 'danger': $danger, 'success': $success)
+
+@each $class, $color in $classes
+    .#{$class}
+        background: $color
+        color: $white
+.button
+    padding: $xsSize
+    font-size: $sSize
+    cursor: pointer

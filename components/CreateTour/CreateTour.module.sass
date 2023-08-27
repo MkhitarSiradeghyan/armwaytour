@@ -1,0 +1,60 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.createTour
+    padding: $xsSize
+    background: $grey
+    flex-grow: 1
+    width: 100%
+    .inner
+        +grid(1fr, repeat(2, 1fr), $sSize)
+        font-size: $sSize
+        .descriptions
+            +grid(repeat(3, 1fr), 1fr, $xsSize)
+            +mediaPhone
+                +grid(1fr, repeat(3, 1fr), $sSize)
+            .desc
+                padding: $xsSize
+                background: $white
+                font-family: inherit
+                resize: none
+        .info
+            +grid(repeat(3, 1fr), 1fr, $xsSize)
+            +mediaPhone
+                +grid(1fr, repeat(3, 1fr), $sSize)
+            .images
+                +grid(repeat(auto-fit, minmax(200px, 1fr)), auto, $sSize)
+                .label
+                    width: 100%
+                    display: block
+                    border: 2px dotted $black
+                    font-size: $lSize
+                    color: $grey
+                    background: $white
+                    cursor: pointer
+                    +flex(center, center, column)
+                    .labelPrime
+                        font-size: $xsSize
+                    .labelSec
+                        font-size: $xsSize / 1.4
+                    #file
+                        display: none
+            .titles
+                +grid(1fr, repeat(3, 1fr), $sSize)
+                .title
+                    +flex(flex-start, center)
+                    padding: $xsSize
+                    background: $white
+                    font-size: $xsSize
+            .rest
+                +grid(1fr, repeat(3, 1fr), $xsSize)
+                .price
+                    text-align: center
+                    padding: $xsSize
+                    font-size: $xsSize
+                    background: $white
+                .date
+                    text-align: center
+                    padding: $xsSize
+                    background: $white
+                    font-size: $xsSize

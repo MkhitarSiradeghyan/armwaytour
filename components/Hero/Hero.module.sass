@@ -1,0 +1,30 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.hero
+    width: 100%
+    overflow: hidden
+    margin: 0 auto
+    .inner  
+        width: 100%
+        ul
+            bottom: 50px    
+        .slide
+            max-height: 70vh
+            position: relative
+            height: 100%
+            aspect-ratio: 16 / 9
+            .title
+                position: absolute
+                z-index: 999
+                top: 50%
+                left: 10%
+                transform: translateY(-50%)
+                color: $white
+                font-size: $xlSize
+                +mediaPhone
+                    font-size: $mSize
+            img
+                +centerWithPosition
+                width: 100%
+

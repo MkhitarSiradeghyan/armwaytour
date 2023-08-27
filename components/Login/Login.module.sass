@@ -1,0 +1,21 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.login
+    flex-grow: 1
+    height: 100%
+    +flex(center, center)
+    .wrap
+        padding: $sSize
+        +flex(center, stretch)
+        height: 100%
+        form
+            flex-grow: 1
+            max-width: 500px
+            +flex(center, stretch, column)
+            gap: 10px
+            .input
+                border: 1px solid $warn
+                width: 100%
+                font-size: $sSize
+                padding: $xsSize $sSize

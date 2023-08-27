@@ -1,0 +1,15 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.addItem
+    border: 2px dashed $black
+    padding: $xsSize
+    +flex(center, center)
+    gap: $xsSize
+    font-size: $mSize
+    cursor: pointer
+    input
+        display: none
+    .inner
+        +flex
+        font-size: $xsSize

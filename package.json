@@ -3,14 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "create-files": "node createFiles.bat",
+    "api": "json-server db.json --routes routes.json --port 4200",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
+    "cookies-next": "^2.1.2",
+    "country-flag-icons": "^1.5.7",
+    "json-server": "^0.17.3",
     "next": "13.4.12",
+    "next-redux-wrapper": "^8.1.0",
+    "next-translate-plugin": "^2.5.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-redux": "^8.1.1",
+    "react-slick": "^0.29.0",
+    "redux": "^4.2.1",
+    "sass": "^1.64.1",
+    "slick-carousel": "^1.8.1",
+    "thunk": "^0.0.1"
   }
 }

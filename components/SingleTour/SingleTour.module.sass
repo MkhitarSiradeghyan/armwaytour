@@ -1,0 +1,33 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.heading
+    +flex(space-between, center)
+    +mediaPhone
+        +grid(1fr)
+    .button
+        background: linear-gradient(90deg, $info 0%, $warn 100%)
+        padding: $xsSize $xlSize
+        letter-spacing: 1px
+        color: $white
+        font-size: $sSize
+        text-align: center
+.price
+    font-size: $mSize
+    color: $info
+    padding: $xsSize 0
+    .rest
+        font-size: $xsSize
+.date
+    font-size: $sSize
+    color: $warn
+.description
+    padding: $lSize 0
+    font-size: $sSize
+.item
+    overflow: hidden
+    aspect-ratio: 1 / 1
+    position: relative
+    img
+        object-fit: cover
+        +centerWithPosition

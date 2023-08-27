@@ -1,0 +1,49 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.burger
+    flex-grow: 1
+    height: 0px
+    position: relative
+    label
+        width: 100%
+        height: 60px
+        +flex(flex-end, center)
+        +mediaPhone
+            width: $mSize
+            aspect-ratio: 8 / 5
+            height: auto
+            position: absolute
+            top: $sSize
+            right: $sSize
+            display: block
+            z-index: 9999
+        input
+            display: none
+            &:checked ~ .top
+                top: 50%
+                transform: translateY(-50%) rotateZ(45deg)
+            &:checked ~ .middle
+                width: 0
+            &:checked ~ .bottom
+                top: 50%
+                transform: translateY(-50%) rotateZ(-45deg)
+            &:checked ~ nav
+                display: flex !important
+        .line
+            position: absolute
+            transition: 0.5s
+            width: 100%
+            height: 3px
+            background: #fff
+            display: none
+            +mediaPhone
+                display: block
+        .top
+            top: 0
+        .middle
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        .bottom
+            bottom: 0

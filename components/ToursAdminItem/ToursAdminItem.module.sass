@@ -1,0 +1,45 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.toursAdminItem
+    padding: $xsSize
+    background: $grey
+    &:nth-child(odd)
+        background: darken($grey, 40%)
+    .inner
+        +grid(1fr, auto repeat(2, 1fr), $sSize)
+        font-size: $sSize
+        // padding: $sSize
+        .images
+            +grid(repeat(auto-fit, minmax(200px, 300px)), auto, $sSize)
+            .img
+                position: relative
+                aspect-ratio: 16 / 9
+                overflow: hidden
+                img
+                    width: 100%
+                    +centerWithPosition
+        .descriptions
+            +grid(1fr, repeat(3, 1fr), $xsSize)
+            .desc
+                +flex(flex-start, center)
+                padding: $xsSize
+                background: $white
+        .info
+            +grid(3fr 1fr, 1fr, $xsSize)
+            .titles
+                +grid(1fr, repeat(3, 1fr), $sSize)
+                .title
+                    +flex(flex-start, center)
+                    padding: $xsSize
+                    background: $white
+            .rest
+                +grid(1fr, repeat(3, 1fr), $xsSize)
+                .price
+                    +flex(center, center)
+                    padding: $xsSize
+                    background: $white
+                .date
+                    +flex(center, center)
+                    padding: $xsSize
+                    background: $white

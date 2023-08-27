@@ -1,0 +1,12 @@
+{
+    "locales": [
+      "am",
+      "ru",
+      "en"
+    ],
+    "defaultLocale": "am",
+    "localeDetection": false,
+    "pages": {
+      "*": ["common"]
+    }
+  }

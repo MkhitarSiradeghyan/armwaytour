@@ -1,0 +1,53 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+.outer
+    position: sticky
+    display: block
+    top: 0
+    width: 100%
+    background: $black
+    color: $white
+    padding: $xsSize
+    z-index: 999
+    .inner
+        position: relative
+        +flex(space-between, stretch, row)
+        .logo
+            position: relative
+            width: 60px
+            aspect-ratio: 1 / 1
+            img
+                width: 100%
+                height: 100%
+                +centerWithPosition
+        .linksWrap
+            +flex(center, stretch, column)
+            +mediaPhone
+                display: none
+                position: fixed
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                background: #000e
+            .linksList
+                +flex(space-between, center, row)
+                +mediaPhone
+                    +flex(center, center, column)
+                gap: $mSize
+                .listItem
+                    transition: 0.3s
+                    cursor: pointer
+                    &:hover
+                        transition: 0.3s
+                        color: $warn
+                .activeLink
+                    color: $info
+                .langItem
+                    width: $lSize
+                    cursor: pointer
+                    +flex(center, center, row)
+                    
+                .admin
+                .logout
+                .login

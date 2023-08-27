@@ -1,0 +1,38 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.inner
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    +grid(1fr 1fr)
+    +mediaPhone
+        +grid(1fr, auto auto)
+        position: relative
+    .map
+        width: 100%
+        height: 100%
+        order: 2
+        +mediaPhone
+            order: 1
+            aspect-ratio: 1 / 1
+        .iframe
+            width: 100%
+            height: 100%
+    .contactsWrap
+        order: 1
+        width: 100%
+        height: 100%
+        overflow-y: auto
+        padding: $sSize
+        +mediaPhone
+            order: 2
+            overflow: hidden
+        .contactItem
+            padding: $xsSize
+            .contactInfo
+                +flex()
+                gap: $mSize
+                font-size: $mSize
+                

@@ -1,0 +1,9 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.grid
+    +grid(repeat(auto-fill, minmax(300px, 1fr)))
+    gap: $mSize
+    +mediaPhone
+        +grid(1fr)
+        gap: $xsSize / 4

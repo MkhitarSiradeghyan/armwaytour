@@ -1,0 +1,37 @@
+@use 'styles/variables' as *
+@use 'styles/mixins' as *
+
+.createSlider
+    padding: $xsSize
+    height: 100%
+    background: $grey
+    +grid(minmax(300px, 550px) auto, 1fr, $xsSize)
+    flex-grow: 1
+    +mediaPhone
+        +grid(1fr, 50% 1fr, $xsSize)
+    .image
+        +grid(repeat(auto-fit, minmax(200px, 1fr)), auto, $sSize)
+        .label
+            width: 100%
+            position: relative
+            object-fit: cover
+            display: block
+            border: 2px dotted $black
+            font-size: $lSize
+            color: $grey
+            background: $white
+            cursor: pointer
+            overflow: hidden
+            +flex(center, center, column)
+            img
+                position: absolute
+        #file
+            display: none
+    .titlesWrap
+        +grid(1fr, repeat(3, 1fr) auto, $mSize)
+        .titleItem
+            background: $white
+            +flex(space-between, center)
+            padding: $xsSize
+            .title
+                font-size: $sSize
