@@ -1,1 +1,1 @@
-export const domainName = 'http://localhost:3001'
+export const domainName = 'http://161.97.100.113:3001'
