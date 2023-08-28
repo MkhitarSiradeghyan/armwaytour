@@ -4,6 +4,16 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-EL6QKKQH7C" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-EL6QKKQH7C');
+        `}
+      </Script>
         <link
           rel="stylesheet"
           type="text/css"
