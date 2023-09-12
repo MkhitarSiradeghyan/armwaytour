@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 import { FaCameraRetro } from "react-icons/fa";
 import { useAddPhotoMutation } from "@/src/store/api/galleryApi";
 import { useTranslate } from "@/src/hooks/useTranslate";
+import { domainName } from "@/utils/domainName";
 
 const CreatePhoto = () => {
   const { reload } = useRouter();
@@ -41,7 +42,8 @@ const CreatePhoto = () => {
     formData.append("title_en", textEN);
     formData.append("isVideo", false);
     addGallery(formData);
-    reload()
+    // reload()
+    // fetch(domainName, {method: "POST", body: formData}).then(r => console.log).catch(e => console.log('error fetching formdata', e))
   };
   return (
     <div className={s.createGallery}>

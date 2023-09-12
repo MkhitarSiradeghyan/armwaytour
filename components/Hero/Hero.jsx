@@ -32,7 +32,7 @@ const Hero = () => {
 
         <Slider {...settings}>
           {!isLoading ? (
-            slides.map((el, i) => {
+            slides?.map((el, i) => {
               return (
                 <div key={`k${Math.random()}`} className={s.slide}>
                   <div className={s.title}>{el.translations[dbLocales[locale]].title}</div>
