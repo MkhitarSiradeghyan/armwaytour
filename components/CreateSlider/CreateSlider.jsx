@@ -29,7 +29,7 @@ const CreateSlider = () => {
     formData.append("title_en", textEN);
     formData.append("isVideo", false);
     addSlider(formData);
-    reload();
+    // reload();
   };
   return (
     <div className={s.createSlider}>
