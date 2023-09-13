@@ -1,1 +1,1 @@
-export const domainName = 'https://www.armway.am:3001/api'
+export const domainName = 'https://www.armway.am/api'
