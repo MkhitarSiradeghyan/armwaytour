@@ -16,8 +16,8 @@ const designedByTI = useTranslate('designed_by')
                     </div>
                     <div className={s.media}>
                         <div>{designedByTI}</div>
-                        <a href="https://www.instagram.com/media.labstudio/" target="_blanc">
-                            <img src={rotateLogo.src} width={60} alt="" />
+                        <a href="https://www.instagram.com/media.labstudio/" aria-label="Link to Rotate's instagram page" target="_blanc">
+                            <img src={rotateLogo.src} alt="Rotate" />
                         </a>
                     </div>
                 </div>

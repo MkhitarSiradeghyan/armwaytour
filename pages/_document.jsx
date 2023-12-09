@@ -15,6 +15,13 @@ export default function Document() {
           gtag('config', 'G-EL6QKKQH7C');
         `}
       </Script>
+        
+        <meta name="description" content="This is the official website of ArmWay Tour company"/>
+        <title>ArmWay Tour</title>
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
         <link
           rel="stylesheet"
           type="text/css"
@@ -26,10 +33,6 @@ export default function Document() {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
       </body>
     </Html>
   );
