@@ -17,22 +17,24 @@ export default function Document() {
       </Script>
         
         <meta name="description" content="This is the official website of ArmWay Tour company"/>
-        <title>ArmWay Tour</title>
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
         <link
+        async
           rel="stylesheet"
           type="text/css"
           charSet="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
         <link
+        async
           rel="stylesheet"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        <title>ArmWay Tour</title>
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
       </body>
     </Html>
   );
