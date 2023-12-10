@@ -17,7 +17,8 @@ export default function Document() {
       </Script>
         
         <meta name="description" content="This is the official website of ArmWay Tour company"/>
-        <link
+        
+        {/* <link
         async
           rel="stylesheet"
           type="text/css"
@@ -26,10 +27,13 @@ export default function Document() {
         />
         <link
         async
+        
           rel="stylesheet"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
+        /> */}
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
         <title>ArmWay Tour</title>
       </Head>
       <body>
