@@ -38,5 +38,6 @@
     "delete": "Delete",
     "register": "Register",
     "name": "Name",
-    "upcoming_tours": "Upcoming tours"
+    "upcoming_tours": "Upcoming tours",
+    "failText": "Password is incorrect"
 }

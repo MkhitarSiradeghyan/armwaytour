@@ -13,6 +13,7 @@ const Login = () => {
   const router = useRouter()
   const usernameTI = useTranslate('username')
   const passwordTI = useTranslate('password')
+  const failTextTI = useTranslate('failText')
   const loginTI = useTranslate('login')
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -40,7 +41,7 @@ console.log("error", e)
                 onChange={(e) => setUsername(e.target.value)}
                 name="name"
                 value={username}
-                className={s.input}
+                className={`${s.input} ${s.fail}`}
                 placeholder={usernameTI}
                 type="text"
               />
@@ -49,12 +50,13 @@ console.log("error", e)
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 name="password"
-                className={s.input}
+                className={`${s.input} ${s.fail}`}
                 value={password}
                 placeholder={passwordTI}
                 type="password"
               />
             </div>
+            <div className={s.failText}>{failTextTI}</div>
             <Button title={loginTI} type={'info'}/>
             
           </form>

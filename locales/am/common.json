@@ -39,5 +39,6 @@
     "username": "Մուտքանուն",
     "register": "Գրանցվել",
     "name": "Անուն",
-    "upcoming_tours": "Մոտակա արշավներ"
+    "upcoming_tours": "Մոտակա արշավներ",
+    "failText": "Գաղտնաբառը սխալ է"
 }

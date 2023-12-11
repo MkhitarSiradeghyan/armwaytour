@@ -52,7 +52,7 @@ const handleSubmit = async (e) => {
                 oldPassword: oldPass,
                 newPassword: newPass,
             })
-            // push('/login')
+            push('/login')
         }catch(e){
             console.log(e)
         }

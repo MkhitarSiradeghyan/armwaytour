@@ -38,5 +38,6 @@
     "delete": "Удалить",
     "register": "Записаться",
     "name": "Имя",
-    "upcoming_tours": "Ближайшие туры"
+    "upcoming_tours": "Ближайшие туры",
+    "failText": "Неверный пароль"
 }

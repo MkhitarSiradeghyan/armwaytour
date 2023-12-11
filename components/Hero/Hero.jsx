@@ -7,6 +7,7 @@ import { transformURL } from './../../utils/transformURL';
 import { useRouter } from "next/router";
 import { dbLocales } from "@/utils/getDBLocales";
 import { useTranslate } from "@/src/hooks/useTranslate";
+import Image from "next/image";
 
 const Hero = () => {
   const noItemsTI = useTranslate('no_items')
@@ -36,7 +37,7 @@ const Hero = () => {
               return (
                 <div key={`k${Math.random()}`} className={s.slide}>
                   <div className={s.title}>{el.translations[dbLocales[locale]].title}</div>
-                  <img src={transformURL(el.url)} alt={`Slide ${i}`} />
+                  <Image src={transformURL(el.url)} width={"100%"} height={auto} loading="lazy" alt={`Slide ${i}`} />
                 </div>
               );
             })
